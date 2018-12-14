@@ -1,0 +1,131 @@
+[
+    {
+        "animal": {
+            "id":"1",
+            "nome": "Sid",
+            "sexo":"macho",
+            "idade": "5 anos aproximadamente",
+            "situacao": "larTemporario",
+            "situacao_detalhes": {
+                "voluntario": {
+                    "id":"1",
+                    "nome": "Ricardo Araujo",
+                    "emails": [
+                        {
+                            "email": "elisiarior@gmail.com"
+                        }
+                    ],
+                    "telefones": [
+                        {
+                            "telefone": "(31)9 9881-3339"
+                        },
+                        {
+                            "telefone": "(31)9 9490-2922"
+                        }
+                    ],
+                    "grupo": {
+                        "id":"1",
+                        "nome": "Quem ama cuida"
+                    },
+                    "animais": [
+                        {
+                            "id": "1",
+                            "nome": "Sid",
+                            "foto": "url da foto"
+                        },
+                        {
+                            "id": "2",
+                            "nome": "areta",
+                            "foto": "url da foto"
+                        }
+                    ]
+                }
+            },
+            "grupo": {
+                "grupoId": "1",
+                "nome": "Quem ama cuida"
+            },
+            "diposnivelParaAdocao":"sim"
+        }
+    },
+    {
+        "animal": {
+            "id":"2",
+            "nome": "Areta",
+            "sexo":"fêmea",
+            "idade": "2 anos aproximadamente",
+            "situacao": "internado",
+            "sidutacao_detalhes": {
+                "clinica": {
+                    "id":"1",
+                    "nome": "Veti minas",
+                    "emails": [
+                        {
+                            "email": "contato@vetimg.com"
+                        }
+                    ],
+                    "telefones": [
+                        {
+                            "telefone": "(31)9 9881-3339"
+                        },
+                        {
+                            "telefone": "(31)9 9881-3339"
+                        },
+                        {
+                            "telefone": "(31)9 8987-6754"
+                        },
+                        {
+                            "telefone": "(31)4432-2342"
+                        }
+                    ]
+                }
+            },
+            "grupo": {
+                "id":"1",
+                "nome": "Quem ama cuida"
+            },
+            "diposnivelParaAdocao":"não"
+        }
+    },
+    {
+        "animal": {
+            "id":"3",
+            "nome": "Falcão",
+            "sexo":"macho",
+            "idade": "12 anos aproximadamente",
+            "situacao": "larTemporario",
+            "situacao_detalhes": {
+                "voluntario": {
+                    "id": "1",
+                    "nome": "Paula Henriques",
+                    "emails": [
+                        {
+                            "email": "paula@gmail.com"
+                        }
+                    ],
+                    "telefones": [
+                        {
+                            "telefone": "(31)9 234234-4234"
+                        }
+                    ],
+                    "grupo": {
+                        "id": "1",
+                        "nome": "Quem ama cuida"
+                    },
+                    "animais": [
+                        {
+                            "id": "3",
+                            "nome": "Falcão",
+                            "foto": "url da foto"
+                        }
+                    ]
+                }
+            },
+            "grupo": {
+                "id":"1",
+                "nome": "Quem ama cuida"
+            },
+            "diposnivelParaAdocao":"sim"
+        }
+    }
+]
