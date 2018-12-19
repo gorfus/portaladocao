@@ -10,13 +10,13 @@ const Adote = ({ animais }) => {
                 <div className="col-lg-8 offset-lg-2 text-center">
                     <h3>Encontre o seu novo Amigo!</h3>
                     <p>
-                        Aqui temos todos os animais cadastrastrados para adoção que vieram atravéz de grupos de proteção animal, ongs e voluntários individuais.
-                    .</p>
+                        Podemos ajudar de diversas formas os animais ou quem ajudam eles. 
+                    </p>
                 </div>
                 <div className="row">
                     {
                         Object.keys(animais)
-                            .map(key => <AdoteCard key={key} animal={animais[key]} />)
+                            .map(key => <AdoteCard key={key} animalId={key}  animal={animais[key]} />)
                     }
                 </div>
                 <Paginacao />

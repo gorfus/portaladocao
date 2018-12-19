@@ -10,10 +10,11 @@ import {
 class AdoteCard extends Component {
 
     render() {
-        const animal = this.props.animal.animal
+        const animal = this.props.animal
+        const chave = this.props.animalId
         return (
             <div className="adopt-card col-lg-3 res-margin ">
-                <div className="card bg-light-custom ">
+             <div className="card bg-light-custom ">
                     <div className="thumbnail text-center ">
                         <img src={animal.fotoPrincipal} className="border-irregular1 img-fluid" alt="" />
                         <div className="caption-adoption ">
@@ -23,7 +24,7 @@ class AdoteCard extends Component {
                                 <li><strong>Idade:</strong> {animal.idade}</li>
                             </ul>
                             <div className="text-center">
-                                <Link to={`/adote/adotedetalhes/${animal.id}`} className="btn btn-primary">{animal.nome}</Link>
+                                <Link to={`/adote/adotedetalhes/${chave}`} className="btn btn-primary" animal={animal}>{animal.nome}</Link>
                             </div>
                         </div>
                     </div>

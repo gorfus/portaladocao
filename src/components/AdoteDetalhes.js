@@ -4,8 +4,6 @@ class AdoteDetalhes extends Component {
     constructor(props) {
         super(props)
         const id = this.props.match.params.idAnimal
-
-
         // this.state = {
         //     "animal": animais[id]
         // }
@@ -15,6 +13,7 @@ class AdoteDetalhes extends Component {
         // const animal = this.props.animal.animal
         return (
             <div className="page">
+          
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -23,7 +22,7 @@ class AdoteDetalhes extends Component {
                                     <div id="owl-adopt-single" className="owl-carousel top-centered-nav owl-theme" >
                                         <div className="col-md-12">
                                             <a href="img/adoption/adoption1.jpg" title="your caption here">
-                                                <img src={this.state.foto} className="border-irregular1 img-fluid hover-opacity" alt="" />
+                                                <img   className="border-irregular1 img-fluid hover-opacity" alt="" />
                                             </a>
                                         </div>
                                         <div className="col-md-12">

@@ -9,24 +9,20 @@ import {
 // Paginas para rotas
 import Header from './components/Header'
 
-import Home from './components/Home'
 import Adote from './components/Adote'
 import AdoteDetalhes from './components/AdoteDetalhes'
 import NovoAnimal from './components/NovoAnimal'
-// import MyDropzone from './components/MyDropzonenpm '
-
-//dados
-import animais from './data/animais.json'
+import Home from './website/Home'
+import Footer from './components/Footer'
 
 class App extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      "animais": []
+      "animais": {}
     }
 
-    
     base.bindToState('bichosadocao', {
       context: this,
       state: 'animais'
@@ -36,15 +32,16 @@ class App extends Component {
   render() {
     return (
       <Router >
-        <div className="container">
+
+        <div className="">
           <Header />
-        
-          <br/>
-          <br/>
-          <Route exact path="/" exact render={() => <Home />} />
-          <Route exact path="/adote"  render={() => <Adote animais={this.state.animais} />} />
+
+          <Route exact path="/" render={() => <Home />} />
+          <Route exact path="/adote" render={() => <Adote animais={this.state.animais} />} />
           <Route exact path='/adote/adotedetalhes/:idAnimal' component={AdoteDetalhes} />
           <Route exact path='/novoAnimal' component={NovoAnimal} />
+
+          <Footer />
         </div>
       </Router>
     );

@@ -279,7 +279,7 @@ Last change: 8th June 2018
 /* =========================== Main Slider ============================ */
  #slider{
      width:100% !important;
-     padding-top:140px;
+     padding-top:50px;
 }
  .header-wrapper {
      width: 100%!important;
@@ -1300,8 +1300,8 @@ Last change: 8th June 2018
 /* section */
  section{
      background:#fff;
-     padding-top:120px;
-     padding-bottom:120px;
+     padding-top:20px;
+     padding-bottom:20px;
 }
  .no-padding{
      padding-top:0px;
@@ -1560,7 +1560,7 @@ Last change: 8th June 2018
  @media (max-width: 544px) {
     /* slider */
      #slider{
-         padding-top:58px!important;
+         padding-top:18px!important;
     }
      .header-wrapper .header-text {
          margin-top: 20%;
@@ -1854,7 +1854,7 @@ Last change: 8th June 2018
     }
     /* slider */
      #slider{
-         padding-top:100px;
+         padding-top:30px;
     }
      .header-text {
          min-width: 70%!important;
@@ -1891,3 +1891,7 @@ Last change: 8th June 2018
     }
 }
  
+
+.ajusteSlider{
+    width:1200px;height:800px;margin:0 auto;margin-bottom: 0px;
+}

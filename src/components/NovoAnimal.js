@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
 import base, { storage } from '../data/base'
+import { Redirect } from 'react-router-dom'
+
+//Components
+import ForumlarioVoluntarioGrupo from './ForumlarioVoluntarioGrupo'
+import ForumlarioVoluntarioIndividual from './ForumlarioVoluntarioIndividual'
 
 import { FilePond, registerPlugin } from 'react-filepond';
 import 'filepond/dist/filepond.min.css';
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
 registerPlugin(FilePondPluginImagePreview);
+
+
 
 class NovoAnimal extends Component {
     constructor(props) {
@@ -38,7 +45,10 @@ class NovoAnimal extends Component {
     render() {
         return (
             <div className="container" style={{ padding: "120px" }}>
+                {this.state.success && <Redirect to="/adote" />}
+
                 <h1>Novo animal para adoção</h1>
+                <hr />
                 <form onSubmit={this.handleSubmit}>
                     <div className="row">
                         <div className="col-lg-5">
@@ -57,6 +67,7 @@ class NovoAnimal extends Component {
                             <div className="form-group">
                                 <label htmlFor="tipoAnimal">Tipo</label>
                                 <select className="form-control" id="tipoAnimal" ref={(ref) => this.tipoAnimal = ref}>
+                                    <option value=""> Selecione </option>
                                     <option value="gato"> Gato </option>
                                     <option value="cachorro"> Cachorro </option>
                                     <option value="cavalo"> Cavalo </option>
@@ -67,6 +78,7 @@ class NovoAnimal extends Component {
                             <div className="form-group">
                                 <label htmlFor="sexo">Sexo</label>
                                 <select className="form-control" id="sexo" ref={(ref) => this.sexo = ref}>
+                                <option value=""> Selecione </option>
                                     <option value="femea"> Fêmea </option>
                                     <option value="macho"> Macho </option>
                                 </select>
@@ -91,10 +103,22 @@ class NovoAnimal extends Component {
                             </div>
                         </div>
                         */}
-                        <div className="col-lg-4 text-center">
-                            <hr />
+                        <hr />
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <ForumlarioVoluntarioIndividual />
+                            </div>
+                            <div className="col-lg-6">
+                                <ForumlarioVoluntarioGrupo />
+                                <div className="col-lg-12 text-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div className="row ">
+                        <div className="col-lg-12 text-center">
                             <button type="submit" className="btn btn-info">Salvar</button>
-                            <hr />
                         </div>
                     </div>
                 </form>
